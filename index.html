@@ -7,6 +7,50 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="popup hidden">
+        <div class="popup-container">
+          <div class="feedback">
+            <header class="feedback-header">
+              <h3 class="feedback-title">ваш фидбек</h3> 
+            </header>
+            <div class="feedback-content">
+              <form class="feedback-form">
+                  <div class="feedback-period">
+                    <label class="period-label">Как часто вы заходите на сайт?
+                    <select class="popup-select" required> 
+                        <option selected>Почти каждый день</option>
+                        <option>Раз в несколько дней</option>
+                        <option>Раз в несколько недель</option>
+                        <option>Несколько раз в год</option>
+                    </select>
+                    </label>
+                  </div>
+                  <div class="subscribing">
+                    <span class="subscribing-label">Вы подписаны на e-mail рассылку?</span>
+                    <div class="subscribing-label">
+                    <label>
+                        <input type="radio" class="subscribing-radio" name="subscribing-email">
+                        <span class="radio-group-text">Да</span>
+                    </label>
+                    <label>
+                         <input type="radio" class="subscribing-radio" name="subscribing-email">
+                         <span class="radio-group-text">Нет</span>
+                    </label>
+                    </div>
+                  </div>
+                  <div class="popup-textarea">
+                    <label class="popup-textarea-label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?
+                        <textarea class="popup-textarea-content" placeholder="Может, больше рецептов?"></textarea>
+                      </label>
+                  </div>
+                  <button class="popup-button" type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+          <button class="popup-close" type="button">Закрыть окно</button>
+        </div>
+      </div>
+
     <header class="header">
         <div class="container">
           <div class="header-nav">
@@ -52,7 +96,7 @@
                             <li class="trend-category"><a class="trend-category-link" href="#0">lifestyle</a></li>
                             <li class="trend-category"><a class="trend-category-link" href="#0">interior</a></li>
                         </ul>
-                        <h3 class="trend-name">сейчас в тренде: сад на подоконнике</h3>
+                        <h3 class="trend-name"><a class="trend-link" href="#0">сейчас в тренде: сад на подоконнике</a></h3>
                       </div>
                 </div>
             </article>
@@ -65,7 +109,7 @@
                         <ul class="trend-category-list">
                             <li class="trend-category"><a class="trend-category-link" href="#0">food</a></li>
                         </ul>
-                        <h3 class="trend-name">сыры на красивых картинках из интернета: какие они на вкус?</h3>
+                        <h3 class="trend-name"><a class="trend-link" href="#0">сыры на красивых картинках из интернета: какие они на вкус?</a></h3>
                       </div>
                 </div>
             </article>
@@ -79,7 +123,7 @@
                             <li class="trend-category"><a class="trend-category-link" href="#0">lifestyle</a></li>
                             <li class="trend-category"><a class="trend-category-link" href="#0">travel</a></li>
                         </ul>
-                        <h3 class="trend-name">собираемся в первый поход в горы</h3>
+                        <h3 class="trend-name"><a class="trend-link" href="#0">собираемся в первый поход в горы</a></h3>
                       </div>
                 </div>
             </article>
@@ -93,7 +137,7 @@
                             <li class="trend-category"><a class="trend-category-link" href="#0">food</a></li>
                             <li class="trend-category"><a class="trend-category-link" href="#0">health</a></li>
                         </ul>
-                        <h3 class="trend-name">сейчас в тренде: сколько витамина с в лимонах?</h3>
+                        <h3 class="trend-name"><a class="trend-link" href="#0">сейчас в тренде: сколько витамина с в лимонах?</a></h3>
                       </div>
                 </div>
             </article>
