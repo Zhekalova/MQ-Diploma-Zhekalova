@@ -826,7 +826,7 @@
     background-color: #323232;
   }
 
-  @media (min-width: 641px) and (max-width: 1199px) {
+  @media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
     .container {
       min-width: 641px;
       width: 100%;
@@ -949,6 +949,12 @@
   }
 
   @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+    body {
+      width: 100vw;
+    }
+    .main_content {
+      width: 100%;
+    }
     .trend-name {
       font-size: 15px;
       margin-left: 30px;
@@ -1097,18 +1103,18 @@
     .trend-name {
       font-size: 16px;
     }
-    .products {
+    /*.products {
       min-width: 320px;
       width: 100%;
       box-sizing: border-box;
       padding: 0 15px;
-    }
+    }*/
     .product-list {
       display: flex;
       flex-wrap: wrap;
     }
     .product {
-      min-width: 320px;
+      min-width: 290px;
       width: 100%;
       margin-bottom: 20px;
       box-sizing: border-box;
@@ -1119,7 +1125,7 @@
       width: 100%;
     }
     .product, .product-img, .product-text {
-      min-width: 320px;
+      min-width: 290px;
       width: 100%;
       margin-bottom: 20px;
       box-sizing: border-box;
@@ -1130,12 +1136,16 @@
     .sidebar-header {
       font-size: 16px;
     }
-    .sidebar {
-      min-width: 320px;
+    /*.sidebar, .sidebar-block {
+      min-width: 290px;
       width: 100%;
       padding: 0 15px;
       box-sizing: border-box;
-    }
+    }*/
+      .sidebar-block {
+        min-width: 290px;
+        width: 100%;
+      }
     .search-field {
       width: 242px;
     }
@@ -1153,7 +1163,7 @@
       padding-right: 14px;
     }
     .page-footer {
-      min-width: 320px;
+      min-width: 290px;
       width: 100%;
       box-sizing: border-box;
     }
@@ -1170,14 +1180,14 @@
     .articles-socials, .socials {
       display: block;
       box-sizing: border-box;
-      min-width: 320px;
+      min-width: 290px;
       width: 100%;
     }
     .articles-socials {
       padding-left: 0;
     }
     .footer-text {
-      min-width: 320px;
+      min-width: 290px;
       width: 100%;
     }
 }
@@ -1185,10 +1195,11 @@
 @media (max-width: 640px) and (orientation: landscape) {
    /* .header, .trends {
     margin-left: auto;
-    margin-right: auto;*/
-    .header, .post-section {
+    margin-right: auto;
+   }*/
+    .header, .post-section, .sidebar {
       width: 100%;
-      max-width: 550px;
+      min-width: 320px;
       box-sizing: border-box;
     }
   .burger {
@@ -1237,11 +1248,24 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+  .mailing-field {
+    max-width: 320px;
+  }
+  .search, .mailing-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .product {
+    margin-right: 0;
+  }
 }
 
 @media (max-height: 641px) and (orientation: landscape) {
-  .header, .post-section {
+  .header, .post-section, .sidebar {
     width: 100%;
+    min-width: 320px;
+    box-sizing: border-box;
   }
   
   .trend-article {
@@ -1250,168 +1274,5 @@
   }
   .trend-article:last-child {
     margin-right: 0;
-  }
-
-  .container {
-    /*min-width: 360px;
-    width: 100%;
-    max-width: 640px;*/
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 15px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-  }
-  .popup-select, .popup-textarea-content, .popup-button {
-    width: 275px;
-  }
-  .popup-textarea-content {
-    min-width: 275px;
-    max-width: 275px;
-  }
-  .popup-close {
-    background-size: 27px 27px;
-    top: -30px;
-    width: 27px;
-    height: 27px;
-  }
-  .header {
-    /*min-width: 360px;
-    width: 100%;
-    max-width: 640px;*/
-    background-image: url("../images/banner-mobile.jpg");
-    background-color: grey;
-    color: white;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    margin-bottom: 45px;
-    padding-top: 30px;
-    padding-bottom: 215px;
-    box-sizing: border-box;
-  }
-  .header-logo {
-    padding-top: 220px;
-    width: 268px;
-    margin: auto;
-
-  }
-  .burger {
-    display: block;
-    border-top: 3px solid #ffffff;
-    border-bottom: 3px solid #ffffff;
-    width: 23px;
-    height: 5px;
-    position: absolute;
-    right: 60px;
-    top: 30px;
-  }
-  .burger::before {
-    content: "";
-    border-top: 3px solid #ffffff;
-    width: 23px;
-    height: 3px;
-    position: absolute;
-    right: 0px;
-    top: 13px;
-  }
-  .main {
-    flex-direction: column;
-  }
-  .menu-list {
-    display: none;
-  }
-  .title-container {
-    margin-top: 45px;
-    width: 280px;
-  }
-  .title {
-    font-size: 26px;
-  }
-  .posts, .post-section, .post-picture {
-    min-width: 320px;
-  }
-  .post-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .post-section:last-child {
-    margin-bottom: 45px;
-  }
-  .post-category {
-    margin-top: 15px;
-  }
-  .post-text::after {
-    content: "";
-    display: block;
-    width: 100%;
-    border: 3px solid #eeeeee; 
-  }
-  .post-caption {
-    font-size: 16px;
-  }
-  .post-text {
-    font-size: 14px;
-  }
-  .trends {
-    width: 100%;
-  }
-  .trends-header {
-    font-size: 16px;
-  }
-    .trend-name {
-    font-size: 16px;
-  }
-  .product-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .product {
-    margin-bottom: 20px;
-  }
-  .product, .product-img, .product-text {
-    min-width: 320px;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .sidebar-header {
-    font-size: 16px;
-  }
-  .sidebar {
-    min-width: 320px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .search-field {
-    width: 280px;
-  }
-  .mailing-field {
-    min-width: 320px;
-    width: 100%;
-  }
-  .mailing-button {
-    min-width: 320px;
-  }
-  .tag {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-  .page-footer {
-    min-width: 320px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .popup-container {
-    min-width: 320px;
-    width: 100%;
-  }
-  .feedback-title {
-    font-size: 16px;
-  }
-  .period-label, .subscribing-label, .popup-textarea-label, .popup-select, .radio-group-text, .popup-textarea-content {
-    font-size: 13px;
   }
 }
