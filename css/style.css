@@ -830,7 +830,7 @@
     .container {
       min-width: 641px;
       width: 100%;
-      max-width: 1199px;
+      box-sizing: border-box;
       padding: 0 35px;
       margin-left: auto;
       margin-right: auto;
@@ -863,7 +863,7 @@
       padding-bottom: 125px;
       min-width: 641px;
       width: 100%;
-      max-width: 1199px;
+      box-sizing: border-box;
     }
     .title-container {
       width: 600px;
@@ -878,7 +878,7 @@
       width: 25px;
       height: 16px;
       position: absolute;
-      right: 80px;
+      right: 30px;
       top: 5px;
     }
     .burger::before {
@@ -929,16 +929,16 @@
       flex-wrap: wrap;
     }
     .product {
-      width: calc(50% - 50px);
+      width: calc(50% - 60px);
       margin-left: 20px;
-      margin-right: 50px;
+      margin-right: 40px;
       margin-bottom: 30px;
     }
-    .product:nth-child(even) {
+    /*.product:nth-child(even) {
       margin-right: 0;
-    }
+    }*/
     .product-text {
-      max-width: 330px;
+      max-width: 300px;
     }
     .feedback-title {
       font-size: 18px;
@@ -976,13 +976,13 @@
 
   @media (max-width: 640px) and (orientation: portrait) {
     .container {
-      min-width: 360px;
+      min-width: 320px;
       width: 100%;
-      max-width: 640px;
       padding: 0 15px;
-      margin-left: auto;
-      margin-right: auto;
+      /*margin-left: auto;
+      margin-right: auto;*/
       position: relative;
+      box-sizing: border-box;
     }
     .popup-select, .popup-textarea-content, .popup-button {
       width: 275px;
@@ -998,9 +998,8 @@
       height: 27px;
     }
     .header {
-      min-width: 360px;
+      min-width: 320px;
       width: 100%;
-      max-width: 640px;
       background-image: url("../images/banner-mobile.jpg");
       background-color: grey;
       color: white;
@@ -1011,6 +1010,7 @@
       margin-bottom: 45px;
       padding-top: 30px;
       padding-bottom: 215px;
+      box-sizing: border-box;
     }
     .header-logo {
       padding-top: 220px;
@@ -1025,7 +1025,7 @@
       width: 23px;
       height: 5px;
       position: absolute;
-      right: 60px;
+      right: 15px;
       top: 30px;
     }
     .burger::before {
@@ -1039,6 +1039,9 @@
     }
     .main {
       flex-direction: column;
+      /*box-sizing: border-box;
+      min-width: 320px;
+      width: 100%;*/
     }
     .menu-list {
       display: none;
@@ -1051,7 +1054,11 @@
       font-size: 26px;
     }
     .posts, .post-section, .post-picture {
-      max-width: 330px;
+      /*min-width: 320px;*/
+      width: 100%;
+    }
+    .post-picture {
+      margin-right: 0;
     }
     .post-section {
       display: flex;
@@ -1078,6 +1085,7 @@
     }
     .trends {
       width: 100%;
+      margin-right: 0;
     }
     .trends-header {
       font-size: 16px;
@@ -1089,41 +1097,66 @@
     .trend-name {
       font-size: 16px;
     }
+    .products {
+      min-width: 320px;
+      width: 100%;
+      box-sizing: border-box;
+    }
     .product-list {
       display: flex;
       flex-wrap: wrap;
     }
     .product {
+      min-width: 320px;
+      width: 100%;
       margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+    .products-header {
+      display: block;
+      min-width: 320px;
+      width: 100%;
     }
     .product, .product-img, .product-text {
-      max-width: 330px;
+      min-width: 320px;
+      width: 100%;
       margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+    .product-text {
+      margin-top: -50px;
     }
     .sidebar-header {
       font-size: 16px;
     }
     .sidebar {
-      max-width: 330px;
+      min-width: 320px;
+      width: 100%;
+      box-sizing: border-box;
     }
     .search-field {
       width: 280px;
     }
     .mailing-field {
-      width: 330px;
+      min-width: 320px;
+      width: 100%;
     }
     .mailing-button {
-      width: 330px;
+      min-width: 320px;
+      width: 100%;
     }
     .tag {
       padding-left: 14px;
       padding-right: 14px;
     }
     .page-footer {
-      max-width: 330px;
+      min-width: 320px;
+      width: 100%;
+      box-sizing: border-box;
     }
     .popup-container {
-      width: 330px;
+      min-width: 320px;
+      width: 100%;
     }
     .feedback-title {
       font-size: 16px;
@@ -1131,13 +1164,30 @@
     .period-label, .subscribing-label, .popup-textarea-label, .popup-select, .radio-group-text, .popup-textarea-content {
       font-size: 13px;
     }
+    .articles-socials, .socials {
+      display: block;
+      box-sizing: border-box;
+      min-width: 320px;
+      width: 100%;
+    }
+    .articles-socials {
+      padding-left: 0;
+    }
+    .footer-text {
+      min-width: 320px;
+      width: 100%;
+    }
 }
 
 @media (max-width: 640px) and (orientation: landscape) {
-    .header, .trends {
+   /* .header, .trends {
     margin-left: auto;
-    margin-right: auto;
-  }
+    margin-right: auto;*/
+    .header, .post-section {
+      width: 100%;
+      max-width: 550px;
+      box-sizing: border-box;
+    }
   .burger {
     display: block;
     border-top: 3px solid #ffffff;
@@ -1187,6 +1237,11 @@
 }
 
 @media (max-height: 641px) and (orientation: landscape) {
+  .header, .post-section {
+    width: 100%;
+    max-width: 550px;
+  }
+  
   .trend-article {
     width: calc(50% - 5px);
     margin-right: 5px;
@@ -1196,9 +1251,12 @@
   }
 
   .container {
-    min-width: 360px;
+    /*min-width: 360px;
     width: 100%;
-    max-width: 640px;
+    max-width: 640px;*/
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 550px;
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
@@ -1218,9 +1276,9 @@
     height: 27px;
   }
   .header {
-    min-width: 360px;
+    /*min-width: 360px;
     width: 100%;
-    max-width: 640px;
+    max-width: 640px;*/
     background-image: url("../images/banner-mobile.jpg");
     background-color: grey;
     color: white;
@@ -1231,6 +1289,7 @@
     margin-bottom: 45px;
     padding-top: 30px;
     padding-bottom: 215px;
+    box-sizing: border-box;
   }
   .header-logo {
     padding-top: 220px;
@@ -1271,7 +1330,7 @@
     font-size: 26px;
   }
   .posts, .post-section, .post-picture {
-    max-width: 330px;
+    min-width: 320px;
   }
   .post-section {
     display: flex;
@@ -1313,33 +1372,39 @@
     margin-bottom: 20px;
   }
   .product, .product-img, .product-text {
-    max-width: 330px;
+    min-width: 320px;
+    width: 100%;
     margin-bottom: 20px;
   }
   .sidebar-header {
     font-size: 16px;
   }
   .sidebar {
-    max-width: 330px;
+    min-width: 320px;
+    width: 100%;
   }
   .search-field {
     width: 280px;
   }
   .mailing-field {
-    width: 330px;
+    min-width: 320px;
+    width: 100%;
   }
   .mailing-button {
-    width: 330px;
+    min-width: 320px;
   }
   .tag {
     padding-left: 14px;
     padding-right: 14px;
   }
   .page-footer {
-    max-width: 330px;
+    min-width: 320px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .popup-container {
-    width: 330px;
+    min-width: 320px;
+    width: 100%;
   }
   .feedback-title {
     font-size: 16px;
