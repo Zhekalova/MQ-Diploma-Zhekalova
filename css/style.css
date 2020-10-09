@@ -955,6 +955,28 @@
     .main_content {
       width: 100%;
     }
+    .burger {
+      display: block;
+      border-top: 3px solid #ffffff;
+      border-bottom: 3px solid #ffffff;
+      width: 25px;
+      height: 16px;
+      position: absolute;
+      right: 30px;
+      top: 5px;
+    }
+    .burger::before {
+      content: "";
+      border-top: 3px solid #ffffff;
+      width: 25px;
+      height: 3px;
+      position: absolute;
+      right: 0px;
+      top: 6px;
+    }
+    .menu-list {
+      display: none;
+    }
     .trend-name {
       font-size: 15px;
       margin-left: 30px;
