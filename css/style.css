@@ -1012,6 +1012,10 @@
       position: relative;
       box-sizing: border-box;
     }
+    .popup-container {
+      padding-top: 30px;
+      width: 320px;
+    }
     .popup-select, .popup-textarea-content, .popup-button {
       width: 275px;
     }
@@ -1189,25 +1193,38 @@
       width: 100%;
       box-sizing: border-box;
     }
-    .popup-container {
-      min-width: 320px;
-      width: 100%;
-    }
     .feedback-title {
       font-size: 16px;
     }
     .period-label, .subscribing-label, .popup-textarea-label, .popup-select, .radio-group-text, .popup-textarea-content {
       font-size: 13px;
     }
-    .articles-socials, .socials {
+    .articles-socials {
       display: block;
       box-sizing: border-box;
       min-width: 290px;
       width: 100%;
     }
+    .socials {
+      display: block;
+      box-sizing: border-box;
+      min-width: 230px;
+      width: 100%;
+    }
+    .socials-item {
+      margin-left: 10px;
+    }
+    .socials-item:nth-child(n + 2) {
+      margin-left: 10px;
+    }
+    /*.socials {
+      margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    }
     .articles-socials {
       padding-left: 0;
-    }
+    }*/
     .footer-text {
       min-width: 290px;
       width: 100%;
