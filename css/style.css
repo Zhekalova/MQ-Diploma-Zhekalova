@@ -1020,8 +1020,6 @@
       min-width: 320px;
       width: 100%;
       padding: 0 15px;
-      /*margin-left: auto;
-      margin-right: auto;*/
       position: relative;
       box-sizing: border-box;
     }
@@ -1142,7 +1140,7 @@
       flex-wrap: wrap;
     }
     .product {
-      min-width: 290px;
+      min-width: 320px;
       width: 100%;
       margin-bottom: 20px;
       box-sizing: border-box;
@@ -1150,7 +1148,7 @@
     }
     .products-header {
       display: block;
-      min-width: 320px;
+      min-width: 290px;
       width: 100%;
     }
     .product, .product-img, .product-text {
@@ -1163,13 +1161,13 @@
       margin-top: -50px;
     }
     .sidebar {
+      min-width: 290px;
       margin: auto;
     }
     .sidebar-header {
       font-size: 16px;
     }
       .sidebar-block {
-        min-width: 290px;
         width: 100%;
       }
     .search-field {
@@ -1372,6 +1370,7 @@
   }
   .sidebar {
     margin: auto;
+    min-width: 320px;
   }
   .sidebar-header {
     font-size: 16px;
@@ -1384,14 +1383,12 @@
       min-width: 320px;
       width: 100%;
     }
-  .search-field {
-    max-width: 242px;
-  }
-  .mailing-field {
-    max-width: 320px;
-  }
-  .mailing-button {
-    max-width: 320px;
+    .search-field {
+      width: 272px;
+    }
+  .mailing-field, .mailing-button {
+    min-width: 320px;
+    width: 100%;
   }
   .tag {
     padding-left: 14px;
